@@ -1,0 +1,12 @@
+[
+  "acquire",
+  "advance",
+  "begin",
+  "handover",
+  "inspect",
+  "record",
+  "renew",
+  "resource",
+  "stop_ack",
+  "write_ack"
+]

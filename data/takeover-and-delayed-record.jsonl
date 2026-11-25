@@ -1,0 +1,10 @@
+{"timestamp": 0, "type": "resource", "data": {"resource": "line-a", "parent": null}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "a1", "parent": "line-a"}}
+{"timestamp": 1, "type": "acquire", "data": {"job": "shift", "worker": "w1", "uses": {"a1": "write"}, "ttl": 15}}
+{"timestamp": 2, "type": "begin", "data": {"job": "shift", "worker": "w1", "permit": "permit:1", "resources": ["a1"]}}
+{"timestamp": 3, "type": "record", "data": {"job": "shift", "worker": "w1", "permit": "permit:1", "resource": "a1", "write_id": "delta-1", "value": 15}}
+{"timestamp": 4, "type": "handover", "data": {"job": "shift", "worker": "w2", "permit": "permit:1"}}
+{"timestamp": 5, "type": "record", "data": {"job": "shift", "worker": "w1", "permit": "permit:1", "resource": "a1", "write_id": "delta-2", "value": 18}}
+{"timestamp": 6, "type": "write_ack", "data": {"job": "shift", "worker": "w1", "permit": "permit:1", "resource": "a1", "write_id": "delta-1"}}
+{"timestamp": 7, "type": "stop_ack", "data": {"job": "shift", "worker": "w1", "permit": "permit:1", "resources": ["a1"]}}
+{"timestamp": 8, "type": "inspect", "data": {"job": "shift"}}

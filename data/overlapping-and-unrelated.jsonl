@@ -1,0 +1,16 @@
+{"timestamp": 0, "type": "resource", "data": {"resource": "hall", "parent": null}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "line-a", "parent": "hall"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "line-b", "parent": "hall"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "a1", "parent": "line-a"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "a2", "parent": "line-a"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "kit", "parent": null}}
+{"timestamp": 1, "type": "acquire", "data": {"job": "spot", "worker": "w1", "uses": {"a1": "write", "kit": "write"}, "ttl": 6}}
+{"timestamp": 2, "type": "begin", "data": {"job": "spot", "worker": "w1", "permit": "permit:1", "resources": ["a1", "kit"]}}
+{"timestamp": 3, "type": "acquire", "data": {"job": "entire-a", "worker": "w2", "uses": {"line-a": "write"}, "ttl": 9}}
+{"timestamp": 4, "type": "acquire", "data": {"job": "late-a", "worker": "w3", "uses": {"a2": "read"}, "ttl": 3}}
+{"timestamp": 4, "type": "acquire", "data": {"job": "other", "worker": "w4", "uses": {"line-b": "read"}, "ttl": 3}}
+{"timestamp": 5, "type": "renew", "data": {"job": "spot", "permit": "permit:1", "value": 20}}
+{"timestamp": 7, "type": "advance", "data": {}}
+{"timestamp": 8, "type": "inspect", "data": {"job": "entire-a"}}
+{"timestamp": 9, "type": "stop_ack", "data": {"job": "spot", "worker": "w1", "permit": "permit:1", "resources": ["a1", "kit"]}}
+{"timestamp": 10, "type": "inspect", "data": {"job": "entire-a"}}
