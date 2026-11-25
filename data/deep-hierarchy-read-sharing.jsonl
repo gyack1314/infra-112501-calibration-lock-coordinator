@@ -1,0 +1,15 @@
+{"timestamp": 0, "type": "resource", "data": {"resource": "workshop", "parent": null}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "line-a", "parent": "workshop"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "cell-a", "parent": "line-a"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "s1", "parent": "cell-a"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "s2", "parent": "cell-a"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "line-b", "parent": "workshop"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "b1", "parent": "line-b"}}
+{"timestamp": 1, "type": "acquire", "data": {"job": "cell-reader", "worker": "r1", "uses": {"cell-a": "read"}, "ttl": 5}}
+{"timestamp": 2, "type": "acquire", "data": {"job": "station-reader", "worker": "r2", "uses": {"s1": "read"}, "ttl": 5}}
+{"timestamp": 3, "type": "acquire", "data": {"job": "line-writer", "worker": "w1", "uses": {"line-a": "write"}, "ttl": 10}}
+{"timestamp": 4, "type": "acquire", "data": {"job": "other-line-writer", "worker": "w2", "uses": {"line-b": "write"}, "ttl": 10}}
+{"timestamp": 6, "type": "advance", "data": {}}
+{"timestamp": 7, "type": "advance", "data": {}}
+{"timestamp": 8, "type": "inspect", "data": {"job": "line-writer"}}
+{"timestamp": 8, "type": "inspect", "data": {"resource": "s2"}}

@@ -1,0 +1,17 @@
+{"timestamp": 0, "type": "resource", "data": {"resource": "hall", "parent": null}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "line-a", "parent": "hall"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "a1", "parent": "line-a"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "a2", "parent": "line-a"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "line-b", "parent": "hall"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "b1", "parent": "line-b"}}
+{"timestamp": 0, "type": "resource", "data": {"resource": "kit", "parent": null}}
+{"timestamp": 1, "type": "acquire", "data": {"job": "kit-holder", "worker": "k1", "uses": {"kit": "write"}, "ttl": 4}}
+{"timestamp": 2, "type": "begin", "data": {"job": "kit-holder", "worker": "k1", "permit": "permit:1", "resources": ["kit"]}}
+{"timestamp": 3, "type": "acquire", "data": {"job": "bridge-two-and-kit", "worker": "bridge", "uses": {"a1": "write", "a2": "write", "kit": "write"}, "ttl": 10}}
+{"timestamp": 4, "type": "acquire", "data": {"job": "solo-a1", "worker": "solo", "uses": {"a1": "write"}, "ttl": 8}}
+{"timestamp": 4, "type": "acquire", "data": {"job": "line-b-job", "worker": "b", "uses": {"b1": "write"}, "ttl": 8}}
+{"timestamp": 5, "type": "advance", "data": {}}
+{"timestamp": 6, "type": "inspect", "data": {"job": "bridge-two-and-kit"}}
+{"timestamp": 7, "type": "stop_ack", "data": {"job": "kit-holder", "worker": "k1", "permit": "permit:1", "resources": ["kit"]}}
+{"timestamp": 8, "type": "inspect", "data": {"job": "bridge-two-and-kit"}}
+{"timestamp": 8, "type": "inspect", "data": {"job": "solo-a1"}}

@@ -9,4 +9,7 @@ build/
 coverage/
 __pycache__/
 *.py[cod]
+*.pyo
+.calcoord-state/
+calcoord-state/
 .DS_Store
